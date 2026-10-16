@@ -1,0 +1,28 @@
+{
+  "$schema": "https://charm.land/crush.json",
+  "lsp": {
+    "typescript": {
+      "command": "cmd.exe",
+      "args": [
+        "/d",
+        "/c",
+        "typescript-language-server.cmd",
+        "--stdio"
+      ]
+    }
+  },
+  "mcp": {
+    "context7": {
+      "type": "http",
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "Authorization": "Bearer $CONTEXT7_API_KEY"
+      }
+    },
+    "codebase-memory": {
+      "type": "stdio",
+      "command": "$LOCALAPPDATA/Programs/codebase-memory-mcp/codebase-memory-mcp.exe",
+      "args": []
+    }
+  }
+}
